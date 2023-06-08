@@ -1,6 +1,6 @@
-# Angular Academy Demo RxJS
+# Angular Academy Demo RxJS Start
 
-Demo Project for an RxJS Workshop by <a href="https://angular.ac" target="_blank">Angular Academy</a>.
+Starter Project for the RxJS demo of <a href="https://angular.ac" target="_blank">Angular Academy</a>.
 
 [![Angular Academy](https://www.angularacademy.ca/images/classroom.jpg "Angular Academy")](https://www.angularacademy.ca)
 
