@@ -8,7 +8,6 @@ import { SharedModule } from './shared/shared.module';
 
 import { AppComponent } from './app.component';
 import { RouteReuseStrategy } from '@angular/router';
-import { CustomRouteReuseStrategy } from './custom-route-reuse-strategy';
 
 @NgModule({
   declarations: [
@@ -20,9 +19,6 @@ import { CustomRouteReuseStrategy } from './custom-route-reuse-strategy';
     HttpClientModule,
     SharedModule,
     AppRoutingModule
-  ],
-  providers: [
-    { provide: RouteReuseStrategy, useClass: CustomRouteReuseStrategy }
   ],
   bootstrap: [AppComponent]
 })
