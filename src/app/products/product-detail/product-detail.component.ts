@@ -5,11 +5,14 @@ import { filter, map, Observable, startWith, switchMap } from 'rxjs';
 import { Product } from '../product.interface';
 import { FavouriteService } from '../../services/favourite.service';
 import { ProductService } from '../../services/product.service';
+import { UpperCasePipe, CurrencyPipe, DatePipe } from '@angular/common';
 
 @Component({
-  selector: 'app-product-detail',
-  templateUrl: './product-detail.component.html',
-  styleUrls: ['./product-detail.component.css']
+    selector: 'app-product-detail',
+    templateUrl: './product-detail.component.html',
+    styleUrls: ['./product-detail.component.css'],
+    standalone: true,
+    imports: [UpperCasePipe, CurrencyPipe, DatePipe]
 })
 export class ProductDetailComponent implements OnInit {
 

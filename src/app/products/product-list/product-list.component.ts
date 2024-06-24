@@ -1,16 +1,19 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { FormControl } from '@angular/forms';
 import { Observable, EMPTY, combineLatest, Subscription, tap, catchError, startWith, count, map, debounceTime, filter } from 'rxjs';
 
 import { Product } from '../product.interface';
 import { ProductService } from '../../services/product.service';
 import { FavouriteService } from '../../services/favourite.service';
+import { AsyncPipe, UpperCasePipe, SlicePipe, CurrencyPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+    selector: 'app-product-list',
+    templateUrl: './product-list.component.html',
+    styleUrls: ['./product-list.component.css'],
+    standalone: true,
+    imports: [RouterLink, AsyncPipe, UpperCasePipe, SlicePipe, CurrencyPipe]
 })
 export class ProductListComponent implements OnInit {
 
