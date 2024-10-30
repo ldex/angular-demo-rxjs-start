@@ -49,7 +49,7 @@ export class ProductDetailComponent implements OnInit {
       .productService
       .products$
       .pipe(
-        map(products => products.find(p => p.id === id))
+        map(products => products.find(p => p.id == id))
       )
       .subscribe(
         product => this.product = product

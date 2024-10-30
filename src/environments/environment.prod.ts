@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://retoolapi.dev/U1A9pK'
+  apiUrl: 'https://671d383409103098807c943e.mockapi.io/api'
 };

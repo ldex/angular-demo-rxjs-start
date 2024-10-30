@@ -30,8 +30,8 @@ export class ProductService {
 
   initProducts() {
     const params = {
-      _sort: 'modifiedDate',
-      _order: 'desc',
+        sortBy: 'modifiedDate',
+        order: 'desc'
     };
 
     const options = {
@@ -40,12 +40,15 @@ export class ProductService {
 
     this.products$ = this.http
       .get<Product[]>(this.baseUrl, options)
-      .pipe(delay(1500), tap(console.table));
+      .pipe(
+        delay(1500),
+        tap(console.table)
+      );
   }
 
   insertProduct(newProduct: Product): Observable<Product> {
     newProduct.modifiedDate = new Date();
-    return this.http.post<Product>(this.baseUrl, newProduct).pipe(delay(2000));
+    return this.http.post<Product>(this.baseUrl, newProduct).pipe(delay(1000));
   }
 
   deleteProduct(id: number): Observable<any> {
