@@ -11,7 +11,6 @@ import { UpperCasePipe, CurrencyPipe, DatePipe } from '@angular/common';
     selector: 'app-product-detail',
     templateUrl: './product-detail.component.html',
     styleUrls: ['./product-detail.component.css'],
-    standalone: true,
     imports: [UpperCasePipe, CurrencyPipe, DatePipe]
 })
 export class ProductDetailComponent implements OnInit {

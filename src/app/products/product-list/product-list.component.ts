@@ -12,7 +12,6 @@ import { AsyncPipe, UpperCasePipe, SlicePipe, CurrencyPipe } from '@angular/comm
     selector: 'app-product-list',
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.css'],
-    standalone: true,
     imports: [RouterLink, AsyncPipe, UpperCasePipe, SlicePipe, CurrencyPipe]
 })
 export class ProductListComponent implements OnInit {
