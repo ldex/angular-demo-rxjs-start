@@ -1,4 +1,4 @@
-import { Component, inject, ChangeDetectorRef } from '@angular/core';
+import { Component, inject, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 import { Product } from '../../models/product';
 import { AsyncPipe, CurrencyPipe, JsonPipe, SlicePipe, UpperCasePipe } from '@angular/common';
 import { ProductService } from '../product-service';
@@ -10,6 +10,7 @@ import { FormControl } from '@angular/forms';
   selector: 'app-product-list',
   imports: [UpperCasePipe, CurrencyPipe, JsonPipe, SlicePipe, AsyncPipe, RouterLink],
   templateUrl: './product-list.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './product-list.css',
 })
 export class ProductList {

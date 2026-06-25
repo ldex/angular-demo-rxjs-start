@@ -1,9 +1,10 @@
-import { Component, signal, VERSION } from '@angular/core';
+import { Component, signal, VERSION, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  changeDetection: ChangeDetectionStrategy.Eager,
   templateUrl: './app.html'
 })
 export class App {

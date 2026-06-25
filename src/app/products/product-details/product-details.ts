@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, ChangeDetectionStrategy } from '@angular/core';
 import { Product } from '../../models/product';
 import { AsyncPipe, CurrencyPipe, DatePipe, UpperCasePipe } from '@angular/common';
 import { ProductService } from '../product-service';
@@ -9,6 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   selector: 'app-product-details',
   imports: [UpperCasePipe, CurrencyPipe, DatePipe, AsyncPipe],
   templateUrl: './product-details.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './product-details.css',
 })
 export class ProductDetails {
